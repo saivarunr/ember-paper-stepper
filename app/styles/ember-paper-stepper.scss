@@ -620,7 +620,7 @@ div.md-stepper-indicator-wrapper.md-stepper-indicator.md-stepper-prefix:after{
 content: none;;
 }
 .md-steppers-horizontal{
-  button.md-stepper-indicator.md-active:first-of-type{
+  button.md-stepper-indicator:first-of-type{
     padding-left: 0px;
   }
 }
