@@ -5,5 +5,10 @@ export default Component.extend({
   layout,
   tagName: 'md-step-body',
   classNames: ['flex'],
-  classNameBindings: ['vertical::md-padding']
+  classNameBindings: ['getClassNames'],
+  getClassNames: Ember.computed('extra-classes', function(){
+    let classNames = ['vertical::md-padding'];
+    let extraClasses = (this.get('className')||''.replace(',', ' '));
+    return classNames.concat(extraClasses);
+  }),
 });
