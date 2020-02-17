@@ -95,5 +95,17 @@ export default Component.extend(ParentMixin, {
         c.set('orderedIndex', i);
       }
     });
+  },
+  actions:{
+    onStepClick(step){
+      if(this.get('linear')){
+        return;
+      }
+      if(this.onStepClick){
+        this.onStepClick(this.get('goTo'),step.stepNumber);
+      }else{
+        this.goTo(step.stepNumber);
+      }
+    }
   }
 });

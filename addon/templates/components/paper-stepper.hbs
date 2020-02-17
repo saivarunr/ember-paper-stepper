@@ -37,7 +37,7 @@
           <button
             class="md-stepper-indicator {{if step.isActive "md-active"}} {{if step.isCompleted "md-completed"}} {{if step.hasError "md-error"}}"
             disabled={{step.isButtonDisabled}}
-            onclick={{if linear null (action goTo step.stepNumber)}}
+            onclick={{action "onStepClick" step}}
           >
             <div class="md-stepper-indicator-wrapper">
 
