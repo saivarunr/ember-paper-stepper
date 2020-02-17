@@ -6,7 +6,7 @@ export default Component.extend({
   tagName: 'md-step-body',
   classNames: ['flex'],
   classNameBindings: ['getClassNames'],
-  getClassNames: Ember.computed('extra-classes', function(){
+  getClassNames: Ember.computed('className', function(){
     let classNames = ['vertical::md-padding'];
     let extraClasses = (this.get('className')||''.replace(',', ' '));
     return classNames.concat(extraClasses);
