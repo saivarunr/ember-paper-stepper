@@ -9,6 +9,6 @@ export default Component.extend({
   getClassNames: Ember.computed('className', function(){
     let classNames = ['vertical::md-padding'];
     let extraClasses = (this.get('className')||''.replace(',', ' '));
-    return classNames.concat(extraClasses);
+    return [classNames.concat(extraClasses).join(" ")];
   }),
 });
